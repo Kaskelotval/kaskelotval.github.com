@@ -46,8 +46,17 @@ h4{
     font-family: Helvetica;
     font-size: 100%;
 }
+.black{
+    color: #000000;
+}
 
-
+.fa-mark{
+    background-color: #0b97c4;
+    color: #0b97c4;
+}
+.modal-container{
+    width: 100%;
+}
 hr.star-light,
 hr.star-primary {
     margin: 25px auto 30px;
@@ -224,7 +233,7 @@ section.success a.active {
     display: block;
     position: relative;
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 200px;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption {
@@ -232,19 +241,21 @@ section.success a.active {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: rgba(24,188,156,.9);
+    border-radius: 100%;
+    background: #fff6de;
+
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
-    opacity: 1;
+    opacity: 0.7;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
     position: absolute;
-    top: 50%;
+    top: 40%;
     width: 100%;
     height: 20px;
     margin-top: -12px;
@@ -410,7 +421,7 @@ footer .footer-below {
     margin-top: 5%;
     margin-left: 10%;
     padding: 100px 0;
-    max-width: 80%;
+    width: 80%;
     border: 0;
     border-radius: 0;
     text-align: center;
@@ -445,7 +456,7 @@ footer .footer-below {
 }
 
 .portfolio-modal .close-modal:hover {
-    opacity: 1;
+    opacity: 0.3;
 }
 
 .portfolio-modal .close-modal .lr {
@@ -498,6 +509,11 @@ footer .footer-below {
     height:120%;
 }
 
+.img-responsive{
+    max-width: 100%;
+    width: auto;
+}
+
 .img-src.blurred-image {
     opacity:0;
     -webkit-filter: blur(20px) brightness(0.7);
@@ -528,4 +544,9 @@ footer .footer-below {
 hr {
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.modal-body{
+    width: auto;
+    max-width: 100%;
 }
