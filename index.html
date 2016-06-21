@@ -7,10 +7,21 @@
     <script>
         $(function(){
             <!-- icons -->
-            $("#icons").load("smhiapp.html");
+
+            var ico = $("#icons");
+            ico.load("projects/smhiapp.html", function() {
+                $.get("projects/wakemeapp.html", function(html) {
+                    ico.append(html);
+                });
+            });
 
             <!-- Modals -->
-            $("#modals").load("smhiappmodal.html");
+            var mod = $("#modals");
+            mod.load("projects/modals/smhiappmodal.html", function() {
+                $.get("projects/modals/wakemeappmodal.html", function(html) {
+                    mod.append(html);
+                });
+            });
         });
     </script>
 
