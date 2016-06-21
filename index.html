@@ -2,9 +2,42 @@
 <html lang="en">
 
 <head>
+    <style>
+        div#load_screen{
+            background: #fff;
+            background-image: url('img/loading.svg');
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 25%;
+            background-size: 10%;
+            opacity: 1;
+            position: fixed;
+            z-index:10;
+            top: 0px;
+            width: 100%;
+            height: 1600px;
+        }
+        div#load_screen > div#loading{
+            color:#000;
+            font-weight: 1%;
+            font-family: Helvetica;
+            font-size: 60px;
+            width:100%;
+            text-align: center;
+            height:24px;
+            margin: 40% auto;
+        }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="scrollblur.js"></script>
     <script>
+        window.addEventListener("load", function(){
+            //var load_screen = document.getElementById("load_screen");
+            //document.body.fadeout(load_screen);
+            $("#load_screen").fadeOut("slow");
+        });
+
+
         $(function(){
             <!-- icons -->
 
@@ -259,6 +292,9 @@
         <div class="img-src"></div>
         <div class="img-src blurred-image"></div>
     </div>
+
+    </div>
+    <div id="load_screen"><div id="loading">L O A D I N G</div></div>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
