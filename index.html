@@ -8,24 +8,24 @@
             background-image: url('img/loading.svg');
             background-repeat: no-repeat;
             background-position-x: center;
-            background-position-y: 25%;
+            background-position-y: 50vh;
             background-size: 10%;
             opacity: 1;
             position: fixed;
             z-index:10;
             top: 0px;
             width: 100%;
-            height: 1600px;
+            height: 100vh;
         }
         div#load_screen > div#loading{
             color:#000;
             font-weight: 1%;
             font-family: Helvetica;
-            font-size: 60px;
+            font-size: 5vh;
             width:100%;
             text-align: center;
             height:24px;
-            margin: 40% auto;
+            margin: 25vh auto;
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -46,12 +46,18 @@
                 $.get("projects/wakemeapp.html", function(html) {
                     ico.append(html);
                 });
+                $.get("projects/klwp.html", function(html) {
+                    ico.append(html);
+                });
             });
 
             <!-- Modals -->
             var mod = $("#modals");
             mod.load("projects/modals/smhiappmodal.html", function() {
                 $.get("projects/modals/wakemeappmodal.html", function(html) {
+                    mod.append(html);
+                });
+                $.get("projects/modals/klwpmodal.html", function(html) {
                     mod.append(html);
                 });
             });
