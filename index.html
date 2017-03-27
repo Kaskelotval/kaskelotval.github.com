@@ -30,11 +30,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="scrollblur.js"></script>
     <script>
-        window.addEventListener("load", function(){
-            //var load_screen = document.getElementById("load_screen");
-            //document.body.fadeout(load_screen);
-            $("#load_screen").fadeOut("slow");
-        });
 
 
         $(function(){
@@ -43,6 +38,9 @@
             var ico = $("#icons");
             ico.load("projects/smhiapp.html", function() {
                 $.get("projects/wakemeapp.html", function(html) {
+                    ico.append(html);
+                });
+                $.get("projects/projectneon.html", function(html) {
                     ico.append(html);
                 });
                 $.get("projects/klwp.html", function(html) {
@@ -56,6 +54,9 @@
                 $.get("projects/modals/wakemeappmodal.html", function(html) {
                     mod.append(html);
                 });
+                $.get("projects/projectneonmodal.html", function(html) {
+                    ico.append(html);
+                });                
                 $.get("projects/modals/klwpmodal.html", function(html) {
                     mod.append(html);
                 });
@@ -286,7 +287,6 @@
     </div>
 
     </div>
-    <div id="load_screen"><div id="loading">L O A D I N G</div></div>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
