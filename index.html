@@ -26,12 +26,13 @@
             height:24px;
             margin: 25vh auto;
         }
+        .modal-backdrop {
+             z-index: -1;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="scrollblur.js"></script>
     <script>
-
-
         $(function(){
             <!-- icons -->
 
@@ -55,7 +56,7 @@
                     mod.append(html);
                 });
                 $.get("projects/modals/projectneonmodal.html", function(html) {
-                    ico.append(html);
+                    mod.append(html);
                 });                
                 $.get("projects/modals/klwpmodal.html", function(html) {
                     mod.append(html);
